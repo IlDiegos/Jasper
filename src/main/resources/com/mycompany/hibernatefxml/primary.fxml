@@ -6,11 +6,11 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="350.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hibernatefxml.PrimaryController">
+<BorderPane prefHeight="348.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hibernatefxml.PrimaryController">
    <center>
       <TableView fx:id="tablaPedidos" onMouseClicked="#marcar" prefHeight="160.0" prefWidth="252.0" BorderPane.alignment="CENTER">
         <columns>
@@ -36,26 +36,38 @@
       </VBox>
    </top>
    <bottom>
-      <Label fx:id="labelPendiente" BorderPane.alignment="CENTER">
+      <Label fx:id="labelPendiente" prefHeight="49.0" prefWidth="536.0" BorderPane.alignment="CENTER">
          <font>
             <Font size="16.0" />
          </font>
          <graphic>
-            <FlowPane>
+            <Pane>
                <children>
-                  <Label alignment="CENTER" text="Pendientes: ">
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="12.0" text="Pendientes: ">
                      <font>
                         <Font size="16.0" />
                      </font>
-                     <graphic>
-                        <Button fx:id="btnSalir" alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#salir" text="Salir" />
-                     </graphic>
-                     <FlowPane.margin>
-                        <Insets left="20.0" right="20.0" />
-                     </FlowPane.margin>
                   </Label>
+                  <Button fx:id="btnSalir" alignment="CENTER" contentDisplay="CENTER" layoutX="485.0" layoutY="11.0" onMouseClicked="#salir" prefHeight="15.0" prefWidth="45.0" text="Salir">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnSalir1" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="11.0" onAction="#btnCarta" onMouseClicked="#salir" prefHeight="27.0" prefWidth="103.0" text="Mostrar carta">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnSalir11" alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="11.0" onAction="#btnPedidos" onMouseClicked="#salir" prefHeight="27.0" prefWidth="103.0" text="Mostrar pedidos">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
                </children>
-            </FlowPane>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </Pane>
          </graphic>
          <BorderPane.margin>
             <Insets right="20.0" />
